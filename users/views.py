@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import api_view
@@ -67,3 +68,8 @@ def user_detail(request, pk):
         return Response(UserSerializer(user).data)
     except User.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
+=======
+from django.shortcuts import render
+
+# Create your views here.
+>>>>>>> cc2656b759cba23d39d51007debe9d5b6390a042

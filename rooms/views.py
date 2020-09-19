@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -63,3 +64,8 @@ class RoomView(APIView):
             return Response(status=status.HTTP_200_OK)
         else:
             return Response(status=status.HTTP_404_NOT_FOUND)
+=======
+from django.shortcuts import render
+
+# Create your views here.
+>>>>>>> cc2656b759cba23d39d51007debe9d5b6390a042

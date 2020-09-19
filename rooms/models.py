@@ -27,9 +27,12 @@ class Room(CoreModel):
 
     photo_number.short_description = "Photo Count"
 
+<<<<<<< HEAD
     class Meta:
         ordering = ["-pk"]
 
+=======
+>>>>>>> cc2656b759cba23d39d51007debe9d5b6390a042
 
 class Photo(CoreModel):
 
