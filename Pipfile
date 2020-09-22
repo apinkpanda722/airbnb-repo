@@ -11,10 +11,8 @@ black = "*"
 django = "*"
 pillow = "*"
 django-seed = "*"
-<<<<<<< HEAD
 djangorestframework = "*"
-=======
->>>>>>> cc2656b759cba23d39d51007debe9d5b6390a042
+pyjwt = "*"
 
 [requires]
 python_version = "3.7"

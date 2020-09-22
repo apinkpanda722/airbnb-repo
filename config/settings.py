@@ -46,13 +46,10 @@ PROJECT_APPS = [
     "rooms.apps.RoomsConfig",
 ]
 
-<<<<<<< HEAD
 THIRD_PARTY_APPS = [
     "rest_framework",
 ]
-=======
-THIRD_PARTY_APPS = []
->>>>>>> cc2656b759cba23d39d51007debe9d5b6390a042
+
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 
@@ -138,15 +135,22 @@ MEDIA_URL = "/media/"
 # Auth
 
 AUTH_USER_MODEL = "users.User"
-<<<<<<< HEAD
 
 
-#Django Rest Framework
+# Django Rest Framework
 
 
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
+    "DEFAULT_AUTHENTICATE_CLASSES": [
+        "config.authentication.JWTAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ],
 }
-=======
->>>>>>> cc2656b759cba23d39d51007debe9d5b6390a042
+
+
+if not DEBUG:
+    REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = [
+        "rest_framework.renderers.JSONRenderer",
+    ]
